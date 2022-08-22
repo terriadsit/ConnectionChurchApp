@@ -11,7 +11,6 @@ import {
 
 import Home from "../screens/home";
 import About from "../screens/about";
-import HomeStack from '../routes/homeStack';
 import ReviewDetails from '../screens/reviewDetails';
 
 function CustomDrawerContent(props) {

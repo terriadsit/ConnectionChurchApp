@@ -16,6 +16,6 @@ export const globalStyles = StyleSheet.create({
         lineHeight: 20,
     },
     text: {
-        fontFamily: 'NotoSerif-Regular'
+        fontFamily: 'NotoSerif'
     }
 })

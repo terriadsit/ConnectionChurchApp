@@ -8,15 +8,6 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import MyDrawer from './components/myDrawer';
 import HomeStack from './routes/homeStack';
 
-function Notifications() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications Screen</Text>
-    </View>
-  );
-}
-
-
 export default function App() {
 
   const [fontsLoaded] = useFonts({
@@ -25,11 +16,10 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return null;
+    return <Text>Loading...</Text>;
   } else {
     return (
       <NavigationContainer>
-        {/* <HomeStack /> */}
         <MyDrawer />
       </NavigationContainer>
     );
