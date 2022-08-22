@@ -5,8 +5,13 @@ import {
     Text
 } from 'react-native';
 
-export default function About() {
-    <View>
-        <Text>About Screen</Text>
-    </View>
+import { globalStyles } from '../styles/global';
+
+
+export default function About({ navigation }) {
+    return (
+      <View style={globalStyles.container}>
+        <Text style={globalStyles.titleText}>About Screen</Text>
+      </View>
+    )
 }
