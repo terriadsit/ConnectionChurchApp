@@ -12,6 +12,7 @@ import {
 import Home from "../screens/home";
 import About from "../screens/about";
 import ReviewDetails from '../screens/reviewDetails';
+import HomeStack from '../routes/homeStack';
 
 function CustomDrawerContent(props) {
     return (
@@ -38,10 +39,10 @@ function CustomDrawerContent(props) {
         useLegacyImplementation
         drawerContent={(props) => <CustomDrawerContent {...props} />}
       >
-        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Home" component={HomeStack} />
         <Drawer.Screen name="About" component={About} />
         {/* <Stack.Screen name="Home" component={Home} /> */}
-        <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
+        {/* <Stack.Screen name="ReviewDetails" component={ReviewDetails} /> */}
       </Drawer.Navigator>
     );
   }
