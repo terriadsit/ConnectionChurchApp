@@ -10,9 +10,10 @@ import {
   } from '@react-navigation/drawer';
 
 import Home from "../screens/home";
-import About from "../screens/about";
+import AboutStack from '../routes/aboutStack';
 import ReviewDetails from '../screens/reviewDetails';
 import HomeStack from '../routes/homeStack';
+import MainScreen from './mainScreen';
 
 function CustomDrawerContent(props) {
     return (
@@ -36,14 +37,13 @@ function CustomDrawerContent(props) {
   export default function MyDrawer() {
     return (
       <Drawer.Navigator
+        // Navigator initialRouteName="Home"
         useLegacyImplementation
         drawerContent={(props) => <CustomDrawerContent {...props} />}
       >
         <Drawer.Screen name="Home" component={HomeStack} />
-        <Drawer.Screen name="About" component={About} />
-        {/* <Stack.Screen name="Home" component={Home} /> */}
-        {/* <Stack.Screen name="ReviewDetails" component={ReviewDetails} /> */}
-      </Drawer.Navigator>
+        <Drawer.Screen name="About" component={AboutStack} />
+     </Drawer.Navigator>
     );
   }
   

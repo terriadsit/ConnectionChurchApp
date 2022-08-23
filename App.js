@@ -7,6 +7,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 import MyDrawer from './components/myDrawer';
 import HomeStack from './routes/homeStack';
+import AboutStack from './routes/aboutStack';
 
 export default function App() {
 
