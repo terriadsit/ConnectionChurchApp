@@ -8,6 +8,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import MyDrawer from './components/myDrawer';
 import HomeStack from './routes/homeStack';
 import AboutStack from './routes/aboutStack';
+import MainScreen from './components/mainScreen';
 
 export default function App() {
 
@@ -21,7 +22,7 @@ export default function App() {
   } else {
     return (
       <NavigationContainer>
-        <MyDrawer />
+        <MainScreen />
       </NavigationContainer>
     );
   }
