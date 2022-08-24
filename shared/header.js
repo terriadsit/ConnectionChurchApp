@@ -1,19 +1,23 @@
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 export default function Header({ title }) {
     return (
-        <View style={styles.header}>
-          <Text style={styles.headerText}>{title}</Text>
-            
-            
-            <Image
+        <ImageBackground 
+          source={require('../assets/game_bg.png')}
+          style={styles.header}
+        >
+           <Image style={styles.headerImage}
+             source={require('../assets/heart_logo.png')} 
+            />
+          <Text style={{ fontFamily: 'NotoSerif-Bold', fontSize: 20 }}>{title}</Text>
+           {/* <Image
                 style={styles.icon}
                 source={require('../assets/family-tree.png')}
-            />
-        </View>
+            /> */}
+        </ImageBackground>
 
     )
 }
@@ -26,7 +30,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row', // main axis
         alignItems: 'center',  // cross axis ie center vertically
         justifyContent: 'center',
-        
+        borderRadius: 12
     },
     headerText: {
         fontFamily: 'NotoSerif-Bold',
@@ -41,5 +45,12 @@ const styles = StyleSheet.create({
           borderRadius: 15,
           position: 'absolute',
           left: 250
+    },
+    headerImage: {
+        width: 25,
+          height: 25,
+          marginHorizontal: 10,
+          
+          left: 0
     }
 })

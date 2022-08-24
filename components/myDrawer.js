@@ -46,6 +46,7 @@ function CustomDrawerContent(props) {
             fontFamily: 'NotoSerif-Bold',
           }
         }}
+       
         Navigator initialRouteName="Home"
         useLegacyImplementation
         drawerContent={(props) => <CustomDrawerContent {...props} />}
@@ -53,9 +54,8 @@ function CustomDrawerContent(props) {
         <Drawer.Screen 
           name="Home" 
           component={HomeStack} 
-          options={{ headerTitle: (props) => <Header title='Books:' /> }}
-          
-        />
+          options={{ headerTitle: (props) => <Header title='Books:' /> }} 
+         />
         <Drawer.Screen 
           name="About" 
           component={AboutStack} 
