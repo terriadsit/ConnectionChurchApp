@@ -13,10 +13,7 @@ export default function Header({ title }) {
              source={require('../assets/heart_logo.png')} 
             />
           <Text style={{ fontFamily: 'NotoSerif-Bold', fontSize: 20 }}>{title}</Text>
-           {/* <Image
-                style={styles.icon}
-                source={require('../assets/family-tree.png')}
-            /> */}
+          
         </ImageBackground>
 
     )
@@ -30,7 +27,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row', // main axis
         alignItems: 'center',  // cross axis ie center vertically
         justifyContent: 'center',
-        borderRadius: 12
+        
     },
     headerText: {
         fontFamily: 'NotoSerif-Bold',
