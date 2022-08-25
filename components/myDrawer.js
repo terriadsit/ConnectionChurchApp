@@ -1,7 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
 import {
     createDrawerNavigator,
     DrawerContentScrollView,
@@ -10,10 +9,9 @@ import {
   } from '@react-navigation/drawer';
 
 import Header from '../shared/header';
-import Home from "../screens/home";
 import AboutStack from '../routes/aboutStack';
-import ReviewDetails from '../screens/reviewDetails';
 import HomeStack from '../routes/homeStack';
+import VideoStack from '../routes/videoStack';
 
 function CustomDrawerContent(props) {
     return (
@@ -61,6 +59,11 @@ function CustomDrawerContent(props) {
           component={AboutStack} 
           options={{ headerTitle: (props) => <Header title='About Us:'/> }}
         />
+        <Drawer.Screen 
+          name="Videos" 
+          component={VideoStack} 
+          options={{ headerTitle: (props) => <Header title='Watch:' /> }} 
+         />
      </Drawer.Navigator>
     );
   }
