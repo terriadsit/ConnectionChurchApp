@@ -5,10 +5,9 @@ import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-import MyDrawer from './components/myDrawer';
+import MyDrawer from './routes/myDrawer';
 import HomeStack from './routes/homeStack';
 import AboutStack from './routes/aboutStack';
-//import MainScreen from './components/mainScreen';
 
 export default function App() {
 

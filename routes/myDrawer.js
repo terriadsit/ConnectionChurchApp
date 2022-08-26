@@ -9,9 +9,9 @@ import {
   } from '@react-navigation/drawer';
 
 import Header from '../shared/header';
-import AboutStack from '../routes/aboutStack';
-import HomeStack from '../routes/homeStack';
-import VideoStack from '../routes/videoStack';
+import AboutStack from './aboutStack';
+import HomeStack from './homeStack';
+import VideoTabs from './videoTabs';
 
 function CustomDrawerContent(props) {
     return (
@@ -61,7 +61,7 @@ function CustomDrawerContent(props) {
         />
         <Drawer.Screen 
           name="Videos" 
-          component={VideoStack} 
+          component={VideoTabs} 
           options={{ headerTitle: (props) => <Header title='Watch:' /> }} 
          />
      </Drawer.Navigator>
