@@ -12,6 +12,7 @@ import Header from '../shared/header';
 import AboutStack from './aboutStack';
 import HomeStack from './homeStack';
 import VideoTabs from './videoTabs';
+import TheBibleStack from './theBibleStack';
 
 function CustomDrawerContent(props) {
     return (
@@ -54,6 +55,11 @@ function CustomDrawerContent(props) {
           component={HomeStack} 
           options={{ headerTitle: (props) => <Header title='Books:' /> }} 
          />
+         <Drawer.Screen 
+          name="Bible" 
+          component={TheBibleStack} 
+          options={{ headerTitle: (props) => <Header title='The Bible:'/> }}
+        />
         <Drawer.Screen 
           name="About" 
           component={AboutStack} 
