@@ -9,22 +9,14 @@ import {
 import { globalStyles, images } from '../styles/global';
 import Card from '../shared/card';
 
-export default function ReviewDetails({ route, navigation }) {
+export default function CoreValues({ route, navigation }) {
   
-  const { item } = route.params;
-    const title = item.title;
-    return (
+   return (
       <View style={globalStyles.container}>
         <Card>
-          <Text style={globalStyles.titleText}>{item.title}</Text>
-          <Text style={globalStyles.text}>{item.body}</Text>
-          <View style={styles.rating}>
-            <Text style={globalStyles.text}>Rating:</Text>
-            <Image 
-              style={styles.image}
-              source={images.ratings[rating]}
-            /> 
-          </View>
+          <Text style={globalStyles.titleText}>Core Values</Text>
+          
+          
         </Card>
       </View>
     )

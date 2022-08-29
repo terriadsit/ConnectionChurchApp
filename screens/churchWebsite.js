@@ -5,19 +5,19 @@ import * as WebBrowser from 'expo-web-browser';
 import FlatButton from "../shared/button";
 import Card from "../shared/card";
 
-export default function TheBible() {
+export default function ChurchWebsite() {
 
   const handlePress = () => {
-    WebBrowser.openBrowserAsync('https://www.blueletterbible.org/niv/jhn/1/1/s_998001');
+    WebBrowser.openBrowserAsync('https://www.myconnection.church/');
   }
 
 
   return (
     <View style={styles.thisView}>
         <Card>
-          <Text style={styles.thisText}>Read the Bible online, BlueLetterBible.org</Text>
+          <Text style={styles.thisText}>Visit our full website, MyConnection.Church</Text>
           <FlatButton 
-            text='Read Now' 
+            text='Go Now' 
             onPress={handlePress}>
           </FlatButton>
         </Card>

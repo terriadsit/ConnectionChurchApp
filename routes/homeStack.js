@@ -34,7 +34,7 @@ export default function HomeStack() {
       <Stack.Screen 
         name="Home Screen" 
         component={Home}
-        options={{ headerShown: false }} 
+        options={{ headerShown: true }} 
       />
       <Stack.Screen 
         name="ReviewDetails" 

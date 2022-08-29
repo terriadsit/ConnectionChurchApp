@@ -26,19 +26,19 @@ export default function VideoTabs() {
       <Tab.Screen 
         name="Recent Videos" 
         component={RecentVideos}
-        options={{ headerShown: false }} 
+        options={{ headerShown: true }} 
       />
 
       <Tab.Screen 
         name="Watch Now" 
         component={WatchNow}
-        options={{ headerShown: false }} 
+        options={{ headerShown: true }} 
       />
 
       <Tab.Screen 
         name="Current Series" 
         component={CurrentSeries}
-        options={{ headerShown: false }} 
+        options={{ headerShown: true }} 
       />
       
     </Tab.Navigator>

@@ -1,16 +1,13 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import ChurchWebsite from '../screens/churchWebsite';
 import globalStyles from '../styles/global';
 import Header from '../shared/header';
-import Visit from '../screens/visit';
-import CoreValues from '../screens/coreValues';
-import Staff from '../screens/staff';
-import About from '../screens/about';
 
 const Stack = createNativeStackNavigator();
 
-export default function AboutStack() {
+export default function ChurchWebsiteStack() {
   return(
     <Stack.Navigator
       screenOptions={{
@@ -25,24 +22,10 @@ export default function AboutStack() {
       }}
     >
       <Stack.Screen 
-        name="AboutScreen" 
-        component={About} 
+        name="ChurchWebsite" 
+        component={ChurchWebsite} 
         options={{ headerShown: true }}
      />
-     <Stack.Screen 
-        name="Staff" 
-        component={Staff} 
-        options={{ headerShown: true }}
-     />
-     <Stack.Screen 
-        name="Visit" 
-        component={Visit} 
-        options={{ headerShown: true }}
-     /><Stack.Screen 
-     name="CoreValues" 
-     component={CoreValues} 
-     options={{ headerShown: true }}
-  />
     </Stack.Navigator>
   )
 }

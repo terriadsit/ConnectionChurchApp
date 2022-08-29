@@ -13,6 +13,8 @@ import AboutStack from './aboutStack';
 import HomeStack from './homeStack';
 import VideoTabs from './videoTabs';
 import TheBibleStack from './theBibleStack';
+import ChurchWebsiteStack from './churchWebsiteStack';
+import NextStepsStack from './nextStepsStack';
 
 function CustomDrawerContent(props) {
     return (
@@ -22,10 +24,7 @@ function CustomDrawerContent(props) {
           label="Close drawer"
           onPress={() => props.navigation.closeDrawer()}
         />
-        <DrawerItem
-          label="Toggle drawer"
-          onPress={() => props.navigation.toggleDrawer()}
-        />
+        
       </DrawerContentScrollView>
     );
    }
@@ -70,6 +69,16 @@ function CustomDrawerContent(props) {
           component={VideoTabs} 
           options={{ headerTitle: (props) => <Header title='Watch:' /> }} 
          />
+         <Drawer.Screen 
+          name="Next Steps" 
+          component={NextStepsStack} 
+          options={{ headerTitle: (props) => <Header title='Next Steps'/> }}
+        />
+         <Drawer.Screen 
+          name="Full Website" 
+          component={ChurchWebsiteStack} 
+          options={{ headerTitle: (props) => <Header title='Connection Website'/> }}
+        />
      </Drawer.Navigator>
     );
   }
