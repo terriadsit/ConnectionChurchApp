@@ -4,13 +4,15 @@ import {
     Button,
     TextInput,
     View,
-    Text
+    Text,
+    FlatList
 } from 'react-native';
 import { globalStyles } from '../styles/global';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
 import FlatButton from '../shared/button';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const reviewSchema = yup.object({
   firstName: yup.string()
@@ -22,8 +24,8 @@ const reviewSchema = yup.object({
     .max(255, "Must be shorter than 255")
     .required("Must enter a last name."),
   email: yup.string()
-    .required("Must enter an email.")
-    .email(),
+    .email('Invalid email')
+    .required('Required'),
   phoneNumber: yup.string()
     .min(10)
     .max(16),
@@ -45,8 +47,8 @@ export default function NextStepsForm({ item }) {
     const title = item.title;
       console.log('nextstepsform', key,title)
       return(
-        <View style={globalStyles.container}>
-          <Text>{title}</Text>
+        <ScrollView style={globalStyles.container}>
+          <Text style={globalStyles.titleText}>{title}</Text>
           <Formik
             validationSchema={reviewSchema}
             initialValues={{ firstName: '', lastName: '', email: '', phoneNumber: '', address: ''}}
@@ -114,15 +116,22 @@ export default function NextStepsForm({ item }) {
                       onBlur={props.handleBlur('comments')}
                     />
                     <Text style={globalStyles.errorText}>{props.touched.comments && props.errors.comments}</Text>
-                   
-                    <FlatButton 
-                      text='submit'
-                      onPress={props.handleSubmit}
-                    />
                     
+                    <View style={styles.buttonContainer}>
+                      <FlatButton 
+                        text='submit'
+                        onPress={props.handleSubmit}
+                      />
+                    </View>
                 </View>
             )}
           </Formik>
-        </View>
+        </ScrollView>
     )
 }
+
+const styles = StyleSheet.create({
+    buttonContainer: {
+        paddingBottom: 60
+    }
+})

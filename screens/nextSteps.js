@@ -76,8 +76,7 @@ export default function NextSteps({ navigation }) {
           data={steps}
           renderItem={({ item }) => (
           <TouchableOpacity onPress={() => pressHandler({ item })} >
-            {/* <TouchableOpacity >  */}
-              <Card >
+             <Card >
                 <Text style={globalStyles.titleText}>{item.title}</Text>
                 <Image 
                   style={styles.image}
