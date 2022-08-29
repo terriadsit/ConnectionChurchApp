@@ -17,6 +17,7 @@ import {
 import { images, globalStyles } from '../styles/global';
 import Card from '../shared/card';
 import ReviewForm from './reviewForm';
+import NextStepsForm from './nextStepsForm';
 
 export default function NextSteps({ navigation }) {
 
@@ -28,7 +29,9 @@ export default function NextSteps({ navigation }) {
     { title: 'Membership', key: '5'},
     { title: 'Discipleship Journey', key: '6'}
   ]);
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState('');
+  const [formKey, setFormKey] = useState();
 
   const addReview = (review) => {
     review.key = Math.random().toString();
@@ -36,6 +39,14 @@ export default function NextSteps({ navigation }) {
       return [review, ...currentReviews]
     });
     setModalOpen(false);
+  }
+
+  const pressHandler = ({ item }) => {
+    console.log('pressHandler', item.key, item.title);
+    setFormTitle(item.title);
+    setFormKey(item.key);
+    setModalOpen(true);
+    console.log('formkey', formKey, formTitle)
   }
 
     return (
@@ -49,7 +60,7 @@ export default function NextSteps({ navigation }) {
                 style={{...styles.modalToggle, ...styles.modalClose}} 
                 onPress={() => setModalOpen(false)}
               />
-              <ReviewForm addReview={addReview} />
+              <NextStepsForm item={{ key: formKey, title: formTitle }}  />
             </View>
           </TouchableWithoutFeedback>
         </Modal>
@@ -64,9 +75,9 @@ export default function NextSteps({ navigation }) {
         <FlatList 
           data={steps}
           renderItem={({ item }) => (
-            // <TouchableOpacity  onPress={() => navigation.navigate('ReviewDetails', { item })}>
-            <TouchableOpacity > 
-              <Card>
+          <TouchableOpacity onPress={() => pressHandler({ item })} >
+            {/* <TouchableOpacity >  */}
+              <Card >
                 <Text style={globalStyles.titleText}>{item.title}</Text>
                 <Image 
                   style={styles.image}
