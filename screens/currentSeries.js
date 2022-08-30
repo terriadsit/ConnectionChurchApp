@@ -9,10 +9,19 @@ export default function CurrentSeries() {
   const [playing, setPlaying] = useState(false);
 
   const onStateChange = useCallback((state) => {
-    if (state === "ended") {
-      setPlaying(false);
-      Alert.alert("video has finished playing!");
-    }
+        switch(state) {
+        case 'ended':
+          setPlaying(false);
+          Alert.alert("video has finished playing!");
+          break;
+        case 'paused':
+          setPlaying(false);
+          break;
+        case 'playing':
+            setPlaying(true);
+            break;
+        default:
+      }
   }, []);
 
   const togglePlaying = useCallback(() => {
