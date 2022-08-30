@@ -22,12 +22,12 @@ import NextStepsForm from './nextStepsForm';
 export default function NextSteps({ navigation }) {
 
   const [steps, setSteps] = useState([
-    { title: 'Follow Christ', key: '1'},
+    { title: 'Following Christ', key: '1'},
     { title: 'Baptism', key: '2'},
     { title: 'Small Groups', key: '3'},
-    { title: 'Volunteer', key: '4'},
+    { title: 'Volunteering', key: '4'},
     { title: 'Membership', key: '5'},
-    { title: 'Discipleship Journey', key: '6'}
+    { title: 'The Discipleship Journey', key: '6'}
   ]);
   const [modalOpen, setModalOpen] = useState(false);
   const [formTitle, setFormTitle] = useState('');

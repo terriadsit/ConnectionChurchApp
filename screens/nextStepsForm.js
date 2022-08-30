@@ -10,22 +10,17 @@ import {
 import { globalStyles } from '../styles/global';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import * as MailComposer from "expo-mail-composer"
+
 
 import FlatButton from '../shared/button';
 import { ScrollView } from 'react-native-gesture-handler';
 
 const reviewSchema = yup.object({
-  firstName: yup.string()
+  name: yup.string()
     .min(1, "Must have a character")
     .max(255, "Must be shorter than 255")
     .required("Must enter a first name"),
-  lastName: yup.string()
-    .min(1, "Must have a character")
-    .max(255, "Must be shorter than 255")
-    .required("Must enter a last name."),
-  email: yup.string()
-    .email('Invalid email')
-    .required('Required'),
   phoneNumber: yup.string()
     .min(10)
     .max(16),
@@ -33,25 +28,40 @@ const reviewSchema = yup.object({
     .max(255),
   comments: yup.string()  
     .max(255)
-   // .test('is-num-1-5', 'Rating must be a number 1 - 5', (val) => {
-   //   return parseInt(val) < 6 && parseInt(val) > 0; //return true or false for tests
-   // })
+  
 })
 
-const handleSubmit = (values) => {
-    console.log('handleSubmit', values)
-}
+
 
 export default function NextStepsForm({ item }) {
     const key = item.key;
     const title = item.title;
-      console.log('nextstepsform', key,title)
+    console.log('nextstepsform', key,title)
+
+    const handleSubmit = (values) => {
+        console.log('handleSubmit', values);
+        const subject = `Tell me more about ${title}`
+        const body = `My name is ${values.name}, I would like to learn more about ${title}
+          
+        Here is my contact information.
+          address: ${values.address},
+          phone number: ${values.phoneNumber}. 
+          Comments: ${values.comments}.`
+         
+        // Opens prefilled email
+        MailComposer.composeAsync({
+          recipients: ['terriadsit@yahoo.com'], // array of email addresses
+          subject: subject,
+          body: body
+        })
+    }
+
       return(
         <ScrollView style={globalStyles.container}>
           <Text style={globalStyles.titleText}>{title}</Text>
           <Formik
             validationSchema={reviewSchema}
-            initialValues={{ firstName: '', lastName: '', email: '', phoneNumber: '', address: ''}}
+            initialValues={{ name: '', phoneNumber: '', address: ''}}
             onSubmit={(values, actions) => {
               handleSubmit(values);
               actions.resetForm();
@@ -63,34 +73,17 @@ export default function NextStepsForm({ item }) {
                 <View>
                     <TextInput 
                       style={globalStyles.input}
-                      placeholder='First Name'
-                      onChangeText={props.handleChange('firstName')}  //handles state for us, values.title
-                      value={props.values.firstName} // two way data binding
-                      onBlur={props.handleBlur('firstName')} // triggered when leaving field, then runs validation
+                      placeholder='Name'
+                      onChangeText={props.handleChange('name')}  //handles state for us, values.title
+                      value={props.values.name} // two way data binding
+                      onBlur={props.handleBlur('name')} // triggered when leaving field, then runs validation
                    />
-                    <Text style={globalStyles.errorText}>{props.touched.firstName && props.errors.firstName}</Text>
-                    
-                    <TextInput 
-                      style={globalStyles.input}
-                      placeholder='Last Name'
-                      onChangeText={props.handleChange('lastName')}  //handles state for us, values.title
-                      value={props.values.lastName} // two way data binding
-                      onBlur={props.handleBlur('lastName')} // triggered when leaving field, then runs validation
-                    />
-                    <Text style={globalStyles.errorText}>{props.touched.lastName && props.errors.lastName}</Text>
-                    
-                    <TextInput 
-                      style={globalStyles.input}
-                      placeholder='email address'
-                      onChangeText={props.handleChange('email')}  //handles state for us, values.title
-                      value={props.values.email} // two way data binding
-                      onBlur={props.handleBlur('email')} // triggered when leaving field, then runs validation
-                    />
-                    <Text style={globalStyles.errorText}>{props.touched.email && props.errors.email}</Text>
+                    <Text style={globalStyles.errorText}>{props.touched.name && props.errors.name}</Text>
                     
                     <TextInput 
                       style={globalStyles.input}
                       placeholder='telephone number'
+                      keyboardType='numeric'
                       onChangeText={props.handleChange('phoneNumber')}  //handles state for us, values.title
                       value={props.values.phoneNumber} // two way data binding
                       onBlur={props.handleBlur('phoneNumber')} // triggered when leaving field, then runs validation
@@ -119,7 +112,7 @@ export default function NextStepsForm({ item }) {
                     
                     <View style={styles.buttonContainer}>
                       <FlatButton 
-                        text='submit'
+                        text='email'
                         onPress={props.handleSubmit}
                       />
                     </View>
