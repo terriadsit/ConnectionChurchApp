@@ -22,7 +22,9 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         paddingVertical: 14,
         paddingHorizontal: 10,
-        backgroundColor: '#5c7ee5',
+        backgroundColor: '#403945',
+        width: 200,
+        alignSelf: 'center'
     },
     buttonText: {
         color: 'white',
@@ -30,5 +32,6 @@ const styles = StyleSheet.create({
         textTransform: 'uppercase',
         textAlign: 'center',
         fontSize: 16,
+        fontFamily: 'Gothic'
     }
 })

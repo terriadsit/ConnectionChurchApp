@@ -7,7 +7,7 @@ export const globalStyles = StyleSheet.create({
         backgroundColor: 'white'
     },
     titleText: {
-        fontFamily: 'NotoSerif-Bold',
+        fontFamily: 'Gothic-Bold',
         fontSize: 18,
         color: '#333'
     },
@@ -16,7 +16,7 @@ export const globalStyles = StyleSheet.create({
         lineHeight: 20,
     },
     text: {
-        fontFamily: 'NotoSerif'
+        fontFamily: 'Gothic'
     },
     input: {
         borderWidth: 1,
@@ -36,11 +36,11 @@ export const globalStyles = StyleSheet.create({
 
 export const images = {
     nextStepsImages: {
-        '1': require('../assets/rating-1.png'),
-        '2': require('../assets/rating-2.png'),
-        '3': require('../assets/rating-3.png'),
-        '4': require('../assets/rating-4.png'),
-        '5': require('../assets/rating-5.png'),
-        '6': require('../assets/rating-5.png'),
+        '1': require('../assets/connectionWhite.png'),
+        '2': require('../assets/connectionWhite.png'),
+        '3': require('../assets/connectionWhite.png'),
+        '4': require('../assets/connectionWhite.png'),
+        '5': require('../assets/connectionWhite.png'),
+        '6': require('../assets/connectionWhite.png'),
     }
 }

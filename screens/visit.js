@@ -13,8 +13,9 @@ export default function Visit({ route, navigation }) {
   
    return (
       <View style={globalStyles.container}>
+        
         <Card>
-          <Text style={globalStyles.titleText}>Visit Values</Text>
+          <Text style={globalStyles.titleText}>Visit</Text>
           
           
         </Card>

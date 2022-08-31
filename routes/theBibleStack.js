@@ -10,12 +10,12 @@ export default function TheBibleStack() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#e6e6ff',
+          backgroundColor: '#BDBBC7',
           height: 60
         },
         headerTintColor: 'black',
         headerTitleStyle: {
-          fontFamily: 'NotoSerif-Bold',
+          fontFamily: 'Gothic-Bold',
         }
       }}
     >

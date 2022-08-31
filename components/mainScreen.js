@@ -18,7 +18,7 @@ export default function MainScreen() {
             },
             headerTintColor: 'black',
             headerTitleStyle: {
-              fontFamily: 'NotoSerif-Bold',
+              fontFamily: 'Gothic-Bold',
             }
           }}>
             <Tab.Screen name="HomeTab" component={HomeStack} />

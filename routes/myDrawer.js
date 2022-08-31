@@ -37,11 +37,12 @@ function CustomDrawerContent(props) {
       <Drawer.Navigator
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#e6e6ff'
+            backgroundColor: '#BDBBC7'
+          
           },
-          headerTintColor: 'black',
+          headerTintColor: '#151515',
           headerTitleStyle: {
-            fontFamily: 'NotoSerif-Bold',
+            fontFamily: 'Gothic-Bold',
           }
         }}
        
@@ -52,7 +53,7 @@ function CustomDrawerContent(props) {
         <Drawer.Screen 
           name="Home" 
           component={HomeStack} 
-          options={{ headerTitle: (props) => <Header title='Books:' /> }} 
+          options={{ headerTitle: (props) => <Header title='Connection Church  ' /> }} 
          />
          <Drawer.Screen 
           name="Bible" 

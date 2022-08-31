@@ -8,39 +8,28 @@ import Header from '../shared/header';
 
 const Stack = createNativeStackNavigator();
 
-function LogoTitle() {
-  return (
-    <Image
-      style={{ width: 50, height: 50 }}
-      source={require('../assets/family-tree.png')}
-    />
-  );
-}
+
 
 export default function HomeStack() {
   return(
     <Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#e6e6ff',
-        height: 20
+        backgroundColor: '#BDBBC7',
+        
       },
       headerTintColor: 'black',
       headerTitleStyle: {
-        fontFamily: 'NotoSerif-Bold',
+        fontFamily: 'Gothic-Bold',
       }
     }}
     >
       <Stack.Screen 
-        name="Home Screen" 
+        name="Welcome!" 
         component={Home}
-        options={{ headerShown: true }} 
+        options={{ headerShown: false }} 
       />
-      <Stack.Screen 
-        name="ReviewDetails" 
-        component={ReviewDetails} 
-        options={({ route }) => ({ title: route.params.item.title })}
-      />
+      
     </Stack.Navigator>
   )
 }

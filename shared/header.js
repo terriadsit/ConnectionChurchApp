@@ -5,49 +5,46 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default function Header({ title }) {
     return (
-        <ImageBackground 
-          source={require('../assets/game_bg.png')}
-          style={styles.header}
-        >
-           <Image style={styles.headerImage}
-             source={require('../assets/heart_logo.png')} 
+        <View style={styles.header}>
+           
+          <Text style={styles.headerText}>{title}</Text>
+          <Image style={styles.logo}
+             source={require('../assets/connectionBlack.png')} 
             />
-          <Text style={{ fontFamily: 'NotoSerif-Bold', fontSize: 20 }}>{title}</Text>
-          
-        </ImageBackground>
+        </View>
 
     )
 }
 
 const styles = StyleSheet.create({
+    headerText: {
+        fontFamily: 'Gothic-Bold',
+        
+        fontSize: 20,
+        color: '#151515',
+       
+        
+    },
     header: {
         flex: 1,
         width: '100%',
         height: '100%', // this view should take up 100% of component given to us
         flexDirection: 'row', // main axis
         alignItems: 'center',  // cross axis ie center vertically
-        justifyContent: 'center',
-        
-    },
-    headerText: {
-        fontFamily: 'NotoSerif-Bold',
-        fontWeight: 'bold',
-        fontSize: 20,
-        color: '#333',
-        letterSpacing: 1,
-    },
-    icon: {
-          width: 30,
-          height: 30,
-          borderRadius: 15,
-          position: 'absolute',
-          left: 250
-    },
-    headerImage: {
-        width: 25,
-          height: 25,
-          marginHorizontal: 10,
-          
-          left: 0
-    }
+        justifyContent: 'space-around',
+   },
+   
+    // icon: {
+    //       width: 30,
+    //       height: 30,
+    //       borderRadius: 15,
+    //       position: 'absolute',
+    //       left: 250
+    // },
+     logo: {
+        width: 40,
+        height: 40,
+        borderRadius: 20
+     //    marginLeft: 30
+      }
 })

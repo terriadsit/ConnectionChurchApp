@@ -12,8 +12,8 @@ import AboutStack from './routes/aboutStack';
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    'NotoSerif-Bold': require('./assets/fonts/NotoSerif-Bold.ttf'),
-    'NotoSerif': require('./assets/fonts/NotoSerif-Regular.ttf'),
+    'Gothic-Bold': require('./assets/fonts/NanumGothicCoding-Bold.ttf'),
+    'Gothic': require('./assets/fonts/NanumGothicCoding-Regular.ttf'),
   });
 
   if (!fontsLoaded) {
