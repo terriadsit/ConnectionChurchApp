@@ -4,13 +4,16 @@ import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 export default function Header({ title }) {
+    const image = require('../assets/asYouAre.jpg');
+  
     return (
         <View style={styles.header}>
            
-          <Text style={styles.headerText}>{title}</Text>
-          <Image style={styles.logo}
-             source={require('../assets/connectionBlack.png')} 
+            <Text style={styles.headerText}>{title}</Text>
+            <Image style={styles.logo}
+               source={require('../assets/connectionBlack.png')} 
             />
+          
         </View>
 
     )

@@ -12,13 +12,15 @@ import {
     StyleSheet,
     ImageBackground
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { block } from 'react-native-reanimated';
+import * as WebBrowser from 'expo-web-browser';
 
 
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 import ReviewForm from './reviewForm';
-import { ScrollView } from 'react-native-gesture-handler';
-import { block } from 'react-native-reanimated';
+import FlatButton from '../shared/button';
 
 
 export default function Home({ navigation }) {
@@ -27,7 +29,13 @@ export default function Home({ navigation }) {
   const image2 = require('../assets/bringKids.jpg');
   const image3 = require('../assets/serviceStyle.jpg');
 
+  const handlePress = () => {
+    WebBrowser.openBrowserAsync('https://connection.breezechms.com/give/online');
+  }
+
   return (
+
+    
       <ScrollView style={globalStyles.container}>
         <View style={styles.blockHeading}>
           <Text style={globalStyles.titleText}>WHEN & WHERE</Text> 
@@ -74,6 +82,13 @@ export default function Home({ navigation }) {
             </View>
           </ImageBackground>
         </View>
+        
+        <View style={styles.buttonContainer}>
+          <FlatButton 
+            text='Donate' 
+            onPress={handlePress}>
+          </FlatButton>
+        </View>
       </ScrollView>
     )
 }
@@ -111,13 +126,13 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     paddingTop: 20,
+    alignSelf: 'center'
   },
   image: {
     width: 250,
     height: 250,
     padding: 30,
     alignItems: 'center',
-   
   },
   imageText: {
     fontFamily: 'Gothic',
@@ -131,6 +146,10 @@ const styles = StyleSheet.create({
     padding: 5,
     borderBottomColor: 'white',
     borderBottomWidth: 1
+  },
+  buttonContainer: {
+    padding: 20,
+    paddingBottom: 40
   }
   
 

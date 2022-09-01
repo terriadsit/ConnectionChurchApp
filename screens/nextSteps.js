@@ -64,14 +64,7 @@ export default function NextSteps({ navigation }) {
             </View>
           </TouchableWithoutFeedback>
         </Modal>
-        
-        <Ionicons 
-          name="add" 
-          size={24} 
-          style={styles.modalToggle}
-          onPress={() => setModalOpen(true)}
-        />
-        
+                
         <FlatList 
           data={steps}
           renderItem={({ item }) => (
