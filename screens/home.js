@@ -21,6 +21,7 @@ import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 import ReviewForm from './reviewForm';
 import FlatButton from '../shared/button';
+import NextStepsForm from './nextStepsForm';
 
 
 export default function Home({ navigation }) {
@@ -28,6 +29,7 @@ export default function Home({ navigation }) {
   const image1 = require('../assets/asYouAre.jpg');
   const image2 = require('../assets/bringKids.jpg');
   const image3 = require('../assets/serviceStyle.jpg');
+  const formData = { key: 25, title: 'Connection Church'}
 
   const handlePress = () => {
     WebBrowser.openBrowserAsync('https://connection.breezechms.com/give/online');
@@ -58,27 +60,27 @@ export default function Home({ navigation }) {
             <Text style={styles.blockText}>Summer hours may vary</Text>
          </View>
         </View>
-        <View style={styles.imageContainer}>
-          <ImageBackground source={image1} resizeMode="cover" style={styles.image}>
-            <Text style={styles.imageTextTitle}>COME AS YOU ARE</Text>
+        <View style={globalStyles.imageContainer}>
+          <ImageBackground source={image1} resizeMode="cover" style={globalStyles.image}>
+            <Text style={globalStyles.imageTextTitle}>COME AS YOU ARE</Text>
             <View>
-              <Text style={styles.imageText}>No dresscode. No labels. No judgement. Come as you are.</Text>
+              <Text style={globalStyles.imageText}>No dresscode. No labels. No judgement. Come as you are.</Text>
             </View>
           </ImageBackground>
         </View>
-        <View style={styles.imageContainer}>
-          <ImageBackground source={image2} resizeMode="cover" style={styles.image}>
-            <Text style={styles.imageTextTitle}>BRING THE KIDS</Text>
+        <View style={globalStyles.imageContainer}>
+          <ImageBackground source={image2} resizeMode="cover" style={globalStyles.image}>
+            <Text style={globalStyles.imageTextTitle}>BRING THE KIDS</Text>
             <View>
-              <Text style={styles.imageText}>We have a complimentary nursery staffed by volunteers or you are welcome to bring the kids into the service.</Text>
+              <Text style={globalStyles.imageText}>We have a complimentary nursery staffed by volunteers or you are welcome to bring the kids into the service.</Text>
             </View>
           </ImageBackground>
         </View>
-        <View style={styles.imageContainer}>
-          <ImageBackground source={image3} resizeMode="cover" style={styles.image}>
-            <Text style={styles.imageTextTitle}>SERVICE STYLE</Text>
+        <View style={globalStyles.imageContainer}>
+          <ImageBackground source={image3} resizeMode="cover" style={globalStyles.image}>
+            <Text style={globalStyles.imageTextTitle}>SERVICE STYLE</Text>
             <View>
-              <Text style={styles.imageText}>Music. Honest conversations about Jesus and society today.</Text>
+              <Text style={globalStyles.imageText}>Music. Honest conversations about Jesus and society today.</Text>
             </View>
           </ImageBackground>
         </View>
@@ -88,6 +90,18 @@ export default function Home({ navigation }) {
             text='Donate' 
             onPress={handlePress}>
           </FlatButton>
+        </View>
+        <View style={styles.connectCard}>
+          <View style={styles.blockHeading}>
+            <Text style={globalStyles.titleText}>Connect Card</Text> 
+          </View>
+          <View style={styles.block}>
+             <Text style={styles.blockText}>Fill out our connect card. Let us know if it is your first time visiting.
+                Tell us how we can pray for you. Connect with us to discuss you next steps with Connection Church.
+                We would love to hear from you!
+             </Text>
+          </View>
+          <NextStepsForm item={{ key: '25', title: 'Connect Card' }}/>
         </View>
       </ScrollView>
     )
@@ -114,7 +128,8 @@ const styles = StyleSheet.create({
     //alignItems: 'center',  // cross axis ie center horizontally
     //justifyContent: 'space-around',
     paddingTop: 10,
-    paddingLeft: 20
+    paddingLeft: 20,
+    paddingBottom: 10
   },
   blockContent1: {
     fontSize: 15,
@@ -122,34 +137,18 @@ const styles = StyleSheet.create({
   },
   blockText: {
     fontFamily: 'Gothic',
-    fontSize: 12
+    fontSize: 13,
+    
   },
-  imageContainer: {
-    paddingTop: 20,
-    alignSelf: 'center'
-  },
-  image: {
-    width: 250,
-    height: 250,
-    padding: 30,
-    alignItems: 'center',
-  },
-  imageText: {
-    fontFamily: 'Gothic',
-    color: 'white'
-  },
-  imageTextTitle: {
-    fontSize: 15,
-    fontFamily: 'Gothic-Bold',
-    color: 'white',
-    margin: 5,
-    padding: 5,
-    borderBottomColor: 'white',
-    borderBottomWidth: 1
-  },
+  
   buttonContainer: {
     padding: 20,
     paddingBottom: 40
+  },
+  connectCard: {
+    //backgroundColor: 'orange',
+    //padding: 20,
+    
   }
   
 

@@ -26,6 +26,30 @@ export const globalStyles = StyleSheet.create({
         fontSize: 18,
         borderRadius: 6,
     },
+    imageContainer: {
+        paddingTop: 20,
+        alignSelf: 'center'
+    },
+    image: {
+        width: 250,
+        height: 250,
+        padding: 30,
+        alignItems: 'center',
+    },
+    imageText: {
+        fontFamily: 'Gothic',
+        color: 'white',
+        fontSize: 13
+    },
+    imageTextTitle: {
+        fontSize: 15,
+        fontFamily: 'Gothic-Bold',
+        color: 'white',
+        margin: 5,
+        padding: 5,
+        borderBottomColor: 'white',
+        borderBottomWidth: 1
+    },
     errorText: {
         color: 'crimson',
         fontWeight: 'bold',
@@ -37,11 +61,11 @@ export const globalStyles = StyleSheet.create({
 
 export const images = {
     nextStepsImages: {
-        '1': require('../assets/connectionWhite.png'),
-        '2': require('../assets/connectionWhite.png'),
-        '3': require('../assets/connectionWhite.png'),
-        '4': require('../assets/connectionWhite.png'),
-        '5': require('../assets/connectionWhite.png'),
-        '6': require('../assets/connectionWhite.png'),
+        '1': require('../assets/followJesus.jpg'),
+        '2': require('../assets/baptism.jpg'),
+        '3': require('../assets/smallGroups.jpg'),
+        '4': require('../assets/volunteering.jpg'),
+        '5': require('../assets/membership.jpg'),
+        '6': require('../assets/journey.jpg'),
     }
 }

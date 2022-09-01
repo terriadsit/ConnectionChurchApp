@@ -10,7 +10,8 @@ import {
     View,
     Text,
     Modal,
-    StyleSheet
+    StyleSheet,
+    ImageBackground
 } from 'react-native';
 
 
@@ -42,7 +43,6 @@ export default function NextSteps({ navigation }) {
   }
 
   const pressHandler = ({ item }) => {
-    console.log('pressHandler', item.key, item.title);
     setFormTitle(item.title);
     setFormKey(item.key);
     setModalOpen(true);
@@ -70,11 +70,10 @@ export default function NextSteps({ navigation }) {
           renderItem={({ item }) => (
           <TouchableOpacity onPress={() => pressHandler({ item })} >
              <Card >
-                <Text style={globalStyles.titleText}>{item.title}</Text>
-                <Image 
-                  style={styles.image}
-                  source={images.nextStepsImages[item.key]}
-                />
+               <ImageBackground source={images.nextStepsImages[item.key]} resizeMode="cover" style={globalStyles.image}>
+                  <Text style={globalStyles.imageTextTitle}>{item.title}</Text>
+                  
+                </ImageBackground>
               </Card>
             </TouchableOpacity>
           )}
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
     marginBottom: 0
   },
   image: {
-    height: 50,
-    width: 50
+    height: 200,
+    width: 200
   }
 })

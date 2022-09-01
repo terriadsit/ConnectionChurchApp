@@ -35,18 +35,17 @@ const reviewSchema = yup.object({
 
 export default function NextStepsForm({ item }) {
     const key = item.key;
-    const title = item.title;
-    console.log('nextstepsform', key,title)
-
+    let title = item.title;
+    const formTitle = title === 'Connect Card' ? 'Connect Card' : `Learn more about ${title}.`;
+        
     const handleSubmit = (values) => {
-        console.log('handleSubmit', values);
+        title = 'Connect Card' ? 'Connection Church' : title;
         const subject = `Tell me more about ${title}`
-        const body = `My name is ${values.name}, I would like to learn more about ${title}
+        const body = `My name is ${values.name}, I would like to learn more about ${title}.
           
-        Here is my contact information.
-          address: ${values.address},
-          phone number: ${values.phoneNumber}. 
-          Comments: ${values.comments}.`
+        Here is my contact information: address: ${values.address}, phone number: ${values.phoneNumber}. 
+        
+        My Comments: ${values.comments}`
          
         // Opens prefilled email
         MailComposer.composeAsync({
@@ -58,7 +57,7 @@ export default function NextStepsForm({ item }) {
 
       return(
         <ScrollView style={globalStyles.container}>
-          <Text style={globalStyles.titleText}>{title}</Text>
+          <Text style={styles.title}>{formTitle}</Text>
           <Formik
             validationSchema={reviewSchema}
             initialValues={{ name: '', phoneNumber: '', address: ''}}
@@ -82,7 +81,7 @@ export default function NextStepsForm({ item }) {
                     
                     <TextInput 
                       style={globalStyles.input}
-                      placeholder='telephone number'
+                      placeholder='Telephone number'
                       keyboardType='numeric'
                       onChangeText={props.handleChange('phoneNumber')}  //handles state for us, values.title
                       value={props.values.phoneNumber} // two way data binding
@@ -101,9 +100,9 @@ export default function NextStepsForm({ item }) {
                     <Text style={globalStyles.errorText}>{props.touched.address && props.errors.address}</Text>
                     
                     <TextInput 
-                      multiline minHeight={60}
+                      multiline minHeight={100}
                       style={globalStyles.input}
-                      placeholder='comments'
+                      placeholder='Comments'
                       onChangeText={props.handleChange('comments')}  //handles state for us, values.title
                       value={props.values.comments} // two way data binding
                       onBlur={props.handleBlur('comments')}
@@ -126,5 +125,10 @@ export default function NextStepsForm({ item }) {
 const styles = StyleSheet.create({
     buttonContainer: {
         paddingBottom: 60
+    },
+    title: {
+      fontFamily: 'Gothic-Bold',
+      fontSize: 15,
+      paddingBottom: 10
     }
 })
