@@ -25,9 +25,9 @@ export default function AboutStack() {
       }}
     >
       <Stack.Screen 
-        name="AboutScreen" 
+        name="Get to Know Us" 
         component={About} 
-        options={{ headerShown: true }}
+        options={{ headerShown: false }}
      />
      <Stack.Screen 
         name="Staff" 
@@ -35,7 +35,7 @@ export default function AboutStack() {
         options={{ headerShown: true }}
      />
      <Stack.Screen 
-        name="Visit" 
+        name="Directions" 
         component={Visit} 
         options={{ headerShown: true }}
      /><Stack.Screen 

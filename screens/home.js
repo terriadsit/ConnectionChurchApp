@@ -1,11 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { 
-    TouchableWithoutFeedback, // closes keyboard when outside area touched
-    Keyboard,
-    TouchableOpacity,
-    FlatList,
     View,
     Text,
     Modal,
@@ -13,13 +8,10 @@ import {
     ImageBackground
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import { block } from 'react-native-reanimated';
 import * as WebBrowser from 'expo-web-browser';
 
 
 import { globalStyles } from '../styles/global';
-import Card from '../shared/card';
-import ReviewForm from './reviewForm';
 import FlatButton from '../shared/button';
 import NextStepsForm from './nextStepsForm';
 
@@ -39,25 +31,25 @@ export default function Home({ navigation }) {
 
     
       <ScrollView style={globalStyles.container}>
-        <View style={styles.blockHeading}>
+        <View style={globalStyles.blockHeading}>
           <Text style={globalStyles.titleText}>WHEN & WHERE</Text> 
         </View>
-        <View style={styles.block}>
+        <View style={globalStyles.block}>
           <View>
-            <Text style={styles.blockContent1}>SUNDAYS @ 10 AM</Text>
-            <Text style={styles.blockText}>1455 N Rapids Rd</Text>
-            <Text style={styles.blockText}>Manitowoc, WI 54220</Text>
-            <Text style={styles.blockText}>(920) 684-8845</Text>
-            <Text style={styles.blockText}>office@myConnection.church</Text>
+            <Text style={globalStyles.blockContent1}>SUNDAYS @ 10 AM</Text>
+            <Text style={globalStyles.blockText}>1455 N Rapids Rd</Text>
+            <Text style={globalStyles.blockText}>Manitowoc, WI 54220</Text>
+            <Text style={globalStyles.blockText}>(920) 684-8845</Text>
+            <Text style={globalStyles.blockText}>office@myConnection.church</Text>
          </View>
         </View>
-        <View style={styles.block}>
+        <View style={globalStyles.block}>
           <View>
-            <Text style={styles.blockContent1}>OFFICE HOURS</Text>
-            <Text style={styles.blockText}>Tuesday - Thursday</Text>
-            <Text style={styles.blockText}>9:30 - 2:30</Text>
-            <Text style={styles.blockText}>Or by Appointment</Text>
-            <Text style={styles.blockText}>Summer hours may vary</Text>
+            <Text style={globalStyles.blockContent1}>OFFICE HOURS</Text>
+            <Text style={globalStyles.blockText}>Tuesday - Thursday</Text>
+            <Text style={globalStyles.blockText}>9:30 - 2:30</Text>
+            <Text style={globalStyles.blockText}>Or by Appointment</Text>
+            <Text style={globalStyles.blockText}>Summer hours may vary</Text>
          </View>
         </View>
         <View style={globalStyles.imageContainer}>
@@ -92,11 +84,11 @@ export default function Home({ navigation }) {
           </FlatButton>
         </View>
         <View style={styles.connectCard}>
-          <View style={styles.blockHeading}>
+          <View style={globalStyles.blockHeading}>
             <Text style={globalStyles.titleText}>Connect Card</Text> 
           </View>
-          <View style={styles.block}>
-             <Text style={styles.blockText}>Fill out our connect card. Let us know if it is your first time visiting.
+          <View style={globalStyles.block}>
+             <Text style={globalStyles.blockText}>Fill out our connect card. Let us know if it is your first time visiting.
                 Tell us how we can pray for you. Connect with us to discuss you next steps with Connection Church.
                 We would love to hear from you!
              </Text>
@@ -108,38 +100,7 @@ export default function Home({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  blockHeading: {
-    flex: 1,
-    width: '100%',
-    height: '100%', // this view should take up 100% of component given to us
-    flexDirection: 'row', // main axis
-    alignItems: 'center',  // cross axis ie center vertically
-    //justifyContent: 'center',
-    paddingBottom: 5,
-    
-    borderBottomColor: '#CBC7CF',
-    borderBottomWidth: 1
-  },
-  block: {
-    flex: 1,
-    width: '100%',
-    height: '100%', // this view should take up 100% of component given to us
-    flexDirection: 'column', // main axis
-    //alignItems: 'center',  // cross axis ie center horizontally
-    //justifyContent: 'space-around',
-    paddingTop: 10,
-    paddingLeft: 20,
-    paddingBottom: 10
-  },
-  blockContent1: {
-    fontSize: 15,
-    fontFamily: 'Gothic' 
-  },
-  blockText: {
-    fontFamily: 'Gothic',
-    fontSize: 13,
-    
-  },
+  
   
   buttonContainer: {
     padding: 20,

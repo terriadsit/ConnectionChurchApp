@@ -20,7 +20,7 @@ export default function TheBibleStack() {
       }}
     >
       <Stack.Screen 
-        name="Bible" 
+        name="BibleScreen" 
         component={TheBible} 
         options={{ headerShown: true }}
      />

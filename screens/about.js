@@ -17,9 +17,9 @@ export default function About({ navigation }) {
               </Card>
         </TouchableOpacity>
         
-        <TouchableOpacity onPress={() => navigation.navigate('Visit')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Directions')}>
               <Card>
-                <Text style={globalStyles.titleText}>Visit</Text>
+                <Text style={globalStyles.titleText}>Directions</Text>
               </Card>
         </TouchableOpacity>
        

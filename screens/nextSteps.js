@@ -70,13 +70,13 @@ export default function NextSteps({ navigation }) {
           data={steps}
           renderItem={({ item }) => (
           <TouchableOpacity onPress={() => pressHandler({ item })} >
-             <Card >
-               <ImageBackground source={images.nextStepsImages[item.key]} resizeMode="cover" style={globalStyles.image}>
+              <View style={globalStyles.imageContainer}>
+                <ImageBackground source={images.nextStepsImages[item.key]} resizeMode="cover" style={globalStyles.image}>
                   <View style={globalStyles.imageTextContainer}>
                     <Text style={globalStyles.imageTextTitle}>{item.title}</Text>
                   </View>
                 </ImageBackground>
-              </Card>
+              </View>
             </TouchableOpacity>
           )}
         />

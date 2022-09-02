@@ -5,6 +5,7 @@ import {
     Text,
     Image
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 import { globalStyles, images } from '../styles/global';
 import Card from '../shared/card';
@@ -12,13 +13,38 @@ import Card from '../shared/card';
 export default function CoreValues({ route, navigation }) {
   
    return (
-      <View style={globalStyles.container}>
-        <Card>
-          <Text style={globalStyles.titleText}>Core Values</Text>
-          
-          
-        </Card>
-      </View>
+      <ScrollView style={globalStyles.container}>
+        <View style={styles.scrollContainer}>
+          <View style={globalStyles.blockHeading}>
+            <Text style={globalStyles.titleText}>JESUS.</Text> 
+          </View>
+          <View style={globalStyles.block}>
+            <Text style={globalStyles.blockContent1}>It's all about Jesus!</Text>
+            <Text style={globalStyles.blockText}></Text>
+          </View>
+          <View style={globalStyles.blockHeading}>
+            <Text style={globalStyles.titleText}>THE OTHER SIX DAYS.</Text> 
+          </View>
+          <View style={globalStyles.block}>
+            <Text style={globalStyles.blockContent1}>We strive to live a faith that impacts our other six days of our week and not just Sunday.</Text>
+            <Text style={globalStyles.blockText}></Text>
+          </View>
+          <View style={globalStyles.blockHeading}>
+            <Text style={globalStyles.titleText}>PERSONAL GROWTH.</Text> 
+          </View>
+          <View style={globalStyles.block}>
+            <Text style={globalStyles.blockContent1}>We learn from Jesus to live like Jesus.</Text>
+            <Text style={globalStyles.blockText}></Text>
+          </View>
+          <View style={globalStyles.blockHeading}>
+            <Text style={globalStyles.titleText}>BIG HEART > BIG CHURCH.</Text> 
+          </View>
+          <View style={globalStyles.block}>
+            <Text style={globalStyles.blockContent1}>Our communities need a church of big-hearted ridiculously generous people willing to love and serve anybody.</Text>
+            <Text style={globalStyles.blockText}></Text>
+          </View>
+        </View>
+      </ScrollView>
     )
 }
 
@@ -34,5 +60,8 @@ const styles = StyleSheet.create({
   image: {
     marginTop: 4,
     marginLeft: 2,
+  },
+  scrollContainer: {
+    paddingBottom: 20
   }
 })

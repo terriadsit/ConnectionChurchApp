@@ -26,6 +26,34 @@ export const globalStyles = StyleSheet.create({
         fontSize: 18,
         borderRadius: 6,
     },
+    blockHeading: {
+        flex: 1,
+        width: '100%',
+        height: '100%', // this view should take up 100% of component given to us
+        flexDirection: 'row', // main axis
+        alignItems: 'center',  // cross axis ie center vertically
+        paddingBottom: 5,
+        borderBottomColor: '#CBC7CF',
+        borderBottomWidth: 1
+      },
+      block: {
+        flex: 1,
+        width: '100%',
+        height: '100%', // this view should take up 100% of component given to us
+        flexDirection: 'column', // main axis
+        paddingTop: 10,
+        paddingLeft: 20,
+        paddingBottom: 10
+      },
+      blockContent1: {
+        fontSize: 15,
+        fontFamily: 'Gothic' 
+      },
+      blockText: {
+        fontFamily: 'Gothic',
+        fontSize: 13,
+        
+      },
     imageContainer: {
         paddingTop: 20,
         alignSelf: 'center'
@@ -34,28 +62,26 @@ export const globalStyles = StyleSheet.create({
         width: 250,
         height: 250,
         padding: 30,
+        justifyContent: 'center',
+        
         alignItems: 'center',
     },
     imageTextTitle: {
-        fontSize: 18,
+        fontSize: 15,
         fontFamily: 'Gothic-Bold',
-        color: 'white',
+        color: 'black',
         margin: 5,
-        //padding: 5,
-        borderBottomColor: 'white',
+        borderBottomColor: 'black',
         borderBottomWidth: 1
     },
     imageTextContainer: {
-        backgroundColor: 'rgba(0,0,0,0.2)',
-        //opacity: 0.1,
+        backgroundColor: 'rgba(255,255,255,0.5)',
         borderRadius: 8,
-        //margin: 'auto',
         padding: 10,
-        
-    },
+     },
     imageText: {
         fontFamily: 'Gothic',
-        color: 'white',
+        color: 'black',
         fontSize: 13,
         opacity: 1.0
     },
