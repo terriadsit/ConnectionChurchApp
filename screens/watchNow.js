@@ -6,6 +6,7 @@ import YoutubePlayer from "react-native-youtube-iframe";
 
 import FlatButton from "../shared/button";
 import Card from "../shared/card";
+import { globalStyles } from "../styles/global";
 
 export default function WatchNow() {
 
@@ -15,24 +16,23 @@ export default function WatchNow() {
 
 
   return (
-    <View style={styles.thisView}>
+    <View style={globalStyles.container}>
         <Card>
-          <Text style={styles.thisText}>This screen is under construction. Please visit our website to watch live.</Text>
-          <FlatButton 
-            text='Visit Website' 
-            onPress={handlePress}>
-          </FlatButton>
+          <Text style={globalStyles.text}>This screen is under construction. Please visit our website to watch live.</Text>
+          <View style={styles.buttonContainer}>
+            <FlatButton 
+              text='Visit Website' 
+              onPress={handlePress}>
+            </FlatButton>
+          </View>
         </Card>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-    thisText: {
-        marginBottom: 10
-    },
-    thisView: {
-        marginTop: 20
+    buttonContainer: {
+      paddingTop: 10
     }
 })
 

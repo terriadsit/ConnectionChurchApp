@@ -3,7 +3,7 @@ import {
     StyleSheet,
     View,
     Text,
-    Image
+    ImageBackground
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -11,9 +11,15 @@ import { globalStyles, images } from '../styles/global';
 import Card from '../shared/card';
 
 export default function CoreValues({ route, navigation }) {
-  
+  const pallets = require('../assets/pallets.png');
+
+
    return (
+    
+        
+      
       <ScrollView style={globalStyles.container}>
+        
         <View style={styles.scrollContainer}>
           <View style={globalStyles.blockHeading}>
             <Text style={globalStyles.titleText}>JESUS.</Text> 
@@ -44,7 +50,9 @@ export default function CoreValues({ route, navigation }) {
             <Text style={globalStyles.blockText}></Text>
           </View>
         </View>
+        
       </ScrollView>
+      
     )
 }
 
@@ -57,10 +65,9 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: '#eee',
   },
-  image: {
-    marginTop: 4,
-    marginLeft: 2,
-  },
+  
+    
+
   scrollContainer: {
     paddingBottom: 20
   }

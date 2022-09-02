@@ -30,7 +30,7 @@ export default function RecentVideos() {
   }, []);
 
   // place newest video id in position 0
-  const playList=['AA_5m20moro', '9AsvV1y0M-8'];
+  const playList=['TEcT3dkw83I','AA_5m20moro', '9AsvV1y0M-8'];
   console.log('appstate',AppState.currentState);
 
   return (

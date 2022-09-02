@@ -11,18 +11,18 @@ const Tab = createBottomTabNavigator();
 
 export default function VideoTabs() {
   return(
-   <Tab.Navigator tabBar={props => <VideoTabBar {...props} />}>
-       {/* screenOptions={{
-       headerStyle: {
-         backgroundColor: '#e6e6ff',
-         height: 20
-       },
-       headerTintColor: 'black',
-       headerTitleStyle: {
-         fontFamily: 'NotoSerif-Bold',
-      }
+   <Tab.Navigator tabBar={props => <VideoTabBar {...props} />}
+       screenOptions={{
+        headerStyle: {
+          backgroundColor: '#BDBBC7'
+        
+        },
+        headerTintColor: '#151515',
+        headerTitleStyle: {
+          fontFamily: 'Gothic-Bold',
+        }
      }}
-    > */}
+    >
       <Tab.Screen 
         name="Recent Videos" 
         component={RecentVideos}

@@ -29,8 +29,9 @@ export default function Home({ navigation }) {
 
   return (
 
-    
+   
       <ScrollView style={globalStyles.container}>
+        
         <View style={globalStyles.blockHeading}>
           <Text style={globalStyles.titleText}>WHEN & WHERE</Text> 
         </View>
@@ -95,12 +96,16 @@ export default function Home({ navigation }) {
           </View>
           <NextStepsForm item={{ key: '25', title: 'Connect Card' }}/>
         </View>
+       
       </ScrollView>
+      
     )
 }
 
 const styles = StyleSheet.create({
-  
+  pallets: {
+    height: 300
+  },
   
   buttonContainer: {
     padding: 20,
