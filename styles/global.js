@@ -36,20 +36,30 @@ export const globalStyles = StyleSheet.create({
         padding: 30,
         alignItems: 'center',
     },
-    imageText: {
-        fontFamily: 'Gothic',
-        color: 'white',
-        fontSize: 13
-    },
     imageTextTitle: {
-        fontSize: 15,
+        fontSize: 18,
         fontFamily: 'Gothic-Bold',
         color: 'white',
         margin: 5,
-        padding: 5,
+        //padding: 5,
         borderBottomColor: 'white',
         borderBottomWidth: 1
     },
+    imageTextContainer: {
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        //opacity: 0.1,
+        borderRadius: 8,
+        //margin: 'auto',
+        padding: 10,
+        
+    },
+    imageText: {
+        fontFamily: 'Gothic',
+        color: 'white',
+        fontSize: 13,
+        opacity: 1.0
+    },
+    
     errorText: {
         color: 'crimson',
         fontWeight: 'bold',

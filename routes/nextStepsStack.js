@@ -22,7 +22,7 @@ export default function NextStepsStack() {
       }}
     >
       <Stack.Screen 
-        name="NextSteps" 
+        name="Next Steps:" 
         component={NextSteps} 
         options={{ headerShown: true }}
      />

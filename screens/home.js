@@ -62,24 +62,24 @@ export default function Home({ navigation }) {
         </View>
         <View style={globalStyles.imageContainer}>
           <ImageBackground source={image1} resizeMode="cover" style={globalStyles.image}>
-            <Text style={globalStyles.imageTextTitle}>COME AS YOU ARE</Text>
-            <View>
+            <View style={globalStyles.imageTextContainer}> 
+              <Text style={globalStyles.imageTextTitle}>COME AS YOU ARE</Text>
               <Text style={globalStyles.imageText}>No dresscode. No labels. No judgement. Come as you are.</Text>
             </View>
           </ImageBackground>
         </View>
         <View style={globalStyles.imageContainer}>
           <ImageBackground source={image2} resizeMode="cover" style={globalStyles.image}>
-            <Text style={globalStyles.imageTextTitle}>BRING THE KIDS</Text>
-            <View>
+            <View style={globalStyles.imageTextContainer}>
+              <Text style={globalStyles.imageTextTitle}>BRING THE KIDS</Text>
               <Text style={globalStyles.imageText}>We have a complimentary nursery staffed by volunteers or you are welcome to bring the kids into the service.</Text>
             </View>
           </ImageBackground>
         </View>
         <View style={globalStyles.imageContainer}>
           <ImageBackground source={image3} resizeMode="cover" style={globalStyles.image}>
-            <Text style={globalStyles.imageTextTitle}>SERVICE STYLE</Text>
-            <View>
+          <View style={globalStyles.imageTextContainer}>
+              <Text style={globalStyles.imageTextTitle}>SERVICE STYLE</Text>
               <Text style={globalStyles.imageText}>Music. Honest conversations about Jesus and society today.</Text>
             </View>
           </ImageBackground>

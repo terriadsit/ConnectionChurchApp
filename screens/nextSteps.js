@@ -13,6 +13,7 @@ import {
     StyleSheet,
     ImageBackground
 } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
 
 
 import { images, globalStyles } from '../styles/global';
@@ -23,12 +24,12 @@ import NextStepsForm from './nextStepsForm';
 export default function NextSteps({ navigation }) {
 
   const [steps, setSteps] = useState([
-    { title: 'Following Christ', key: '1'},
-    { title: 'Baptism', key: '2'},
-    { title: 'Small Groups', key: '3'},
-    { title: 'Volunteering', key: '4'},
-    { title: 'Membership', key: '5'},
-    { title: 'The Discipleship Journey', key: '6'}
+    { title: 'Following Christ', link: 'https://connection.breezechms.com/form/28fea2', key: '1'},
+    { title: 'Baptism', link: 'https://connection.breezechms.com/form/a304e3', key: '2'},
+    { title: 'Small Groups', link: 'https://connection.breezechms.com/form/d0edcc', key: '3'},
+    { title: 'Volunteering', link: 'https://connection.breezechms.com/form/2c8b92', key: '4'},
+    { title: 'Membership', link: 'https://connection.breezechms.com/form/a3574e', key: '5'},
+    { title: 'The Discipleship Journey', link: 'https://connection.breezechms.com/form/d27b4c', key: '6'}
   ]);
   const [modalOpen, setModalOpen] = useState(false);
   const [formTitle, setFormTitle] = useState('');
@@ -45,9 +46,9 @@ export default function NextSteps({ navigation }) {
   const pressHandler = ({ item }) => {
     setFormTitle(item.title);
     setFormKey(item.key);
-    setModalOpen(true);
-    console.log('formkey', formKey, formTitle)
-  }
+    WebBrowser.openBrowserAsync(item.link);
+ 
+   }
 
     return (
       <View style={globalStyles.container}>
@@ -71,8 +72,9 @@ export default function NextSteps({ navigation }) {
           <TouchableOpacity onPress={() => pressHandler({ item })} >
              <Card >
                <ImageBackground source={images.nextStepsImages[item.key]} resizeMode="cover" style={globalStyles.image}>
-                  <Text style={globalStyles.imageTextTitle}>{item.title}</Text>
-                  
+                  <View style={globalStyles.imageTextContainer}>
+                    <Text style={globalStyles.imageTextTitle}>{item.title}</Text>
+                  </View>
                 </ImageBackground>
               </Card>
             </TouchableOpacity>
