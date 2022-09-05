@@ -5,7 +5,8 @@ import {
     Text,
     Modal,
     StyleSheet,
-    ImageBackground
+    ImageBackground,
+    Image
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
@@ -21,7 +22,8 @@ export default function Home({ navigation }) {
   const image1 = require('../assets/asYouAre.jpg');
   const image2 = require('../assets/bringKids.jpg');
   const image3 = require('../assets/serviceStyle.jpg');
-  const formData = { key: 25, title: 'Connection Church'}
+  const pallets = require('../assets/palletsShort.jpg');
+  const formData = { key: 25, title: 'Connection Church'};
 
   const handlePress = () => {
     WebBrowser.openBrowserAsync('https://connection.breezechms.com/give/online');
@@ -29,8 +31,7 @@ export default function Home({ navigation }) {
 
   return (
 
-   
-      <ScrollView style={globalStyles.container}>
+     <ScrollView style={globalStyles.container}>
         
         <View style={globalStyles.blockHeading}>
           <Text style={globalStyles.titleText}>WHEN & WHERE</Text> 
@@ -98,13 +99,16 @@ export default function Home({ navigation }) {
         </View>
        
       </ScrollView>
-      
+     
     )
 }
 
 const styles = StyleSheet.create({
   pallets: {
-    height: 300
+    
+    height: 50,
+    width: '100%',
+    padding: 0
   },
   
   buttonContainer: {

@@ -37,8 +37,9 @@ function CustomDrawerContent(props) {
       <Drawer.Navigator
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#BDBBC7'
-          
+            //backgroundColor: '#BDBBC7'
+            //backgroundColor: '#FFEAB8'
+            backgroundColor: '#A58F77'
           },
           headerTintColor: '#151515',
           headerTitleStyle: {

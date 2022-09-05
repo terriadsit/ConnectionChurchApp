@@ -5,7 +5,8 @@ export const globalStyles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 40,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        height: '100%'
     },
     titleText: {
         fontFamily: 'Gothic-Bold',
@@ -92,6 +93,17 @@ export const globalStyles = StyleSheet.create({
         marginBottom: 10,
         marginTop: 6,
         textAlign: 'center',
+    },
+    videoContainer: {
+        flex: 1,
+        width: '100%',
+        height: '100%', // this view should take up 100% of component given to us
+        flexDirection: 'column', // main axis
+        //alignItems: 'center',
+        justifyContent: 'space-around' 
+    },
+    videoButton: {
+        
     }
 });
 

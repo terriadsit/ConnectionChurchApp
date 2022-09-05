@@ -7,14 +7,15 @@ export default function Header({ title }) {
     const image = require('../assets/asYouAre.jpg');
   
     return (
-        <View style={styles.header}>
-           
+         
+      <View style={styles.header}>
+
             <Text style={styles.headerText}>{title}</Text>
             <Image style={styles.logo}
                source={require('../assets/connectionBlack.png')} 
             />
-          
-        </View>
+          </View>
+       
 
     )
 }
@@ -27,6 +28,11 @@ const styles = StyleSheet.create({
         color: '#151515',
        
         
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+        opacity: 0.8,
     },
     header: {
         flex: 1,

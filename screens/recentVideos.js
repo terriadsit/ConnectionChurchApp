@@ -3,6 +3,7 @@ import { AppState, View, Alert } from "react-native";
 import YoutubePlayer from "react-native-youtube-iframe";
 
 import FlatButton from "../shared/button";
+import { globalStyles } from "../styles/global";
 
 export default function RecentVideos() {
 
@@ -34,7 +35,7 @@ export default function RecentVideos() {
   console.log('appstate',AppState.currentState);
 
   return (
-    <View>
+    <View style={globalStyles.videoContainer}>
       <YoutubePlayer
         height={300}
         play={playing}
@@ -42,7 +43,9 @@ export default function RecentVideos() {
         playListStartIndex='0'
         onChangeState={onStateChange}
       />
-      <FlatButton text={playing ? "pause" : "play"} onPress={togglePlaying} />
+      <View style={globalStyles.videoButton}>
+        <FlatButton text={playing ? "pause" : "play"} onPress={togglePlaying} />
+      </View>
     </View>
   );
 }
