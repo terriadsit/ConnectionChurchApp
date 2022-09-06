@@ -37,10 +37,11 @@ function CustomDrawerContent(props) {
       <Drawer.Navigator
         screenOptions={{
           headerStyle: {
-            //backgroundColor: '#BDBBC7'
+            backgroundColor: '#BDBBC7'
             //backgroundColor: '#FFEAB8'
-            backgroundColor: '#A58F77'
+            //backgroundColor: '#7B7B7B'
           },
+          //headerTintColor: 'white',
           headerTintColor: '#151515',
           headerTitleStyle: {
             fontFamily: 'Gothic-Bold',
@@ -67,7 +68,7 @@ function CustomDrawerContent(props) {
           options={{ headerTitle: (props) => <Header title='About Us:'/> }}
         />
         <Drawer.Screen 
-          name="Videos" 
+          name="Watch Sermons" 
           component={VideoTabs} 
           options={{ headerTitle: (props) => <Header title='Watch:' /> }} 
          />

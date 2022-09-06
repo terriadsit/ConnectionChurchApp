@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import RecentVideos from '../screens/recentVideos';
 import WatchNow from '../screens/watchNow';
-import CurrentSeries from '../screens/currentSeries';
 import VideoTabBar from '../components/videoTabBar';
+import YouTubeVideo from '../screens/youTubeVideo';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,23 +21,24 @@ export default function VideoTabs() {
         headerTitleStyle: {
           fontFamily: 'Gothic-Bold',
         }
-     }}
+      }}
+      Navigator initialRouteName="On YouTube"
     >
       <Tab.Screen 
-        name="Recent Videos" 
+        name="Recent Sermons" 
         component={RecentVideos}
         options={{ headerShown: true }} 
       />
 
       <Tab.Screen 
-        name="Watch Now" 
+        name="Watch Live" 
         component={WatchNow}
         options={{ headerShown: true }} 
       />
 
       <Tab.Screen 
-        name="Current Series" 
-        component={CurrentSeries}
+        name="On YouTube" 
+        component={YouTubeVideo}
         options={{ headerShown: true }} 
       />
       

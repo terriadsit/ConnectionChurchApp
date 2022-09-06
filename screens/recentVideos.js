@@ -1,52 +1,22 @@
-import React, { useState, useCallback, useRef } from "react";
-import { AppState, View, Alert } from "react-native";
-import YoutubePlayer from "react-native-youtube-iframe";
+import React from "react";
+import {   View, StyleSheet } from "react-native";
 
-import FlatButton from "../shared/button";
 import { globalStyles } from "../styles/global";
+import VideoComponent from "../components/videoComponent";
 
 export default function RecentVideos() {
-
-  const [playing, setPlaying] = useState(false);
-
-  const onStateChange = useCallback((state) => {
-    switch(state) {
-      case 'ended':
-        setPlaying(false);
-        Alert.alert("video has finished playing!");
-        break;
-      case 'paused':
-        setPlaying(false);
-        break;
-      case 'playing':
-          setPlaying(true);
-          break;
-      default:
-        
-    }
-  }, []);
-
-  const togglePlaying = useCallback(() => {
-    setPlaying((prev) => !prev);
-  }, []);
-
-  // place newest video id in position 0
-  const playList=['TEcT3dkw83I','AA_5m20moro', '9AsvV1y0M-8'];
-  console.log('appstate',AppState.currentState);
-
-  return (
-    <View style={globalStyles.videoContainer}>
-      <YoutubePlayer
-        height={300}
-        play={playing}
-        playList={[...playList]}
-        playListStartIndex='0'
-        onChangeState={onStateChange}
-      />
-      <View style={globalStyles.videoButton}>
-        <FlatButton text={playing ? "pause" : "play"} onPress={togglePlaying} />
-      </View>
+  const link = 'https://cache.stl.churchcasting.io/AvwBFOH9ME7MbtQ9CmWxB3wG19H9Alns/channels/1/embeds/players/wiCQ8pE56BiNsaQ5/render';
+  const text =  'Recent sermons.'
+  
+ return (
+    <View style={globalStyles.container}>
+      <VideoComponent text={text} link={link}/>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+    
+})
+
 

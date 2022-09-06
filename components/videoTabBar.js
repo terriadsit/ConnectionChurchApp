@@ -52,7 +52,7 @@ export default function VideoTabBar({ state, descriptors, navigation }) {
             style={{ flex: 1 }}
           >
             <View style={styles.tab}>
-              <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
+              <Text style={[{ color: isFocused ? '#673ab7' : '#222' }, styles.tabText]}>
                 {label}
               </Text>
             </View>
@@ -81,6 +81,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 2,
         elevation: 3,
+    },
+    tabText: {
+      fontFamily: 'Gothic',
+      paddingTop: 10
     }
 })
 

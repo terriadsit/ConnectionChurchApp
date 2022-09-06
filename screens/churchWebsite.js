@@ -4,6 +4,7 @@ import * as WebBrowser from 'expo-web-browser';
 
 import FlatButton from "../shared/button";
 import Card from "../shared/card";
+import { globalStyles } from "../styles/global";
 
 export default function ChurchWebsite() {
 
@@ -13,13 +14,15 @@ export default function ChurchWebsite() {
 
 
   return (
-    <View style={styles.thisView}>
+    <View style={globalStyles.container}>
         <Card>
-          <Text style={styles.thisText}>Visit our full website, MyConnection.Church</Text>
-          <FlatButton 
-            text='Go Now' 
-            onPress={handlePress}>
-          </FlatButton>
+          <Text style={globalStyles.text}>Visit our full website, MyConnection.Church</Text>
+          <View style={styles.buttonContainer}>
+            <FlatButton 
+              text='Go Now' 
+              onPress={handlePress}>
+            </FlatButton>
+          </View>
         </Card>
     </View>
   );
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
     thisText: {
         marginBottom: 10
     },
-    thisView: {
+    buttonContainer: {
         marginTop: 20
     }
 })

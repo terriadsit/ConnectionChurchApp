@@ -4,6 +4,7 @@ export const globalStyles = StyleSheet.create({
     
     container: {
         flex: 1,
+        
         padding: 40,
         backgroundColor: 'white',
         height: '100%'
@@ -31,8 +32,8 @@ export const globalStyles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%', // this view should take up 100% of component given to us
-        flexDirection: 'row', // main axis
-        alignItems: 'center',  // cross axis ie center vertically
+        //flexDirection: 'row', // main axis
+        //alignItems: 'center',  // cross axis ie center vertically
         paddingBottom: 5,
         borderBottomColor: '#CBC7CF',
         borderBottomWidth: 1
@@ -41,7 +42,8 @@ export const globalStyles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%', // this view should take up 100% of component given to us
-        flexDirection: 'column', // main axis
+        //flexDirection: 'column', // main axis
+        //alignItems: 'center', 
         paddingTop: 10,
         paddingLeft: 20,
         paddingBottom: 10

@@ -13,7 +13,7 @@ export default function ChurchWebsiteStack() {
       screenOptions={{
         headerStyle: {
           backgroundColor: '#BDBBC7',
-          height: 60
+          height: 30
         },
         headerTintColor: 'black',
         headerTitleStyle: {
@@ -22,7 +22,7 @@ export default function ChurchWebsiteStack() {
       }}
     >
       <Stack.Screen 
-        name="ChurchWebsite" 
+        name="Church Website" 
         component={ChurchWebsite} 
         options={{ headerShown: true }}
      />

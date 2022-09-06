@@ -23,6 +23,7 @@ export default function Home({ navigation }) {
   const image2 = require('../assets/bringKids.jpg');
   const image3 = require('../assets/serviceStyle.jpg');
   const pallets = require('../assets/palletsShort.jpg');
+  const logo = require('../assets/connectionBlack.png');
   const formData = { key: 25, title: 'Connection Church'};
 
   const handlePress = () => {
@@ -30,8 +31,14 @@ export default function Home({ navigation }) {
   }
 
   return (
-
-     <ScrollView style={globalStyles.container}>
+    // <View>
+      
+    //     <ImageBackground source={pallets} style={styles.pallets}>
+    //       <Image source={logo} style={styles.logo}></Image>
+    //     </ImageBackground>
+      
+     // <ScrollView style={[{ minHeight: 600, paddingBottom: 100}, globalStyles.container]}>
+      <ScrollView style={ globalStyles.container}>
         
         <View style={globalStyles.blockHeading}>
           <Text style={globalStyles.titleText}>WHEN & WHERE</Text> 
@@ -99,22 +106,29 @@ export default function Home({ navigation }) {
         </View>
        
       </ScrollView>
-     
+    //  </View>
     )
 }
 
 const styles = StyleSheet.create({
   pallets: {
     
-    height: 50,
+    height: 100,
     width: '100%',
     padding: 0
   },
-  
+  logo: {
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    alignSelf: 'center',
+    marginTop: 25
+  },
   buttonContainer: {
     padding: 20,
     paddingBottom: 40
   },
+
   connectCard: {
     //backgroundColor: 'orange',
     //padding: 20,
