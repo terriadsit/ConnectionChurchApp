@@ -29,9 +29,6 @@ export default function ChurchWebsite() {
 }
 
 const styles = StyleSheet.create({
-    thisText: {
-        marginBottom: 10
-    },
     buttonContainer: {
         marginTop: 20
     }
