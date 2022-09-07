@@ -35,20 +35,11 @@ export default function NextSteps({ navigation }) {
   const [formTitle, setFormTitle] = useState('');
   const [formKey, setFormKey] = useState();
 
-  const addReview = (review) => {
-    review.key = Math.random().toString();
-    setReviews((currentReviews) => {
-      return [review, ...currentReviews]
-    });
-    setModalOpen(false);
-  }
-
   const pressHandler = ({ item }) => {
     setFormTitle(item.title);
     setFormKey(item.key);
     WebBrowser.openBrowserAsync(item.link);
- 
-   }
+  }
 
     return (
       <View style={globalStyles.container}>

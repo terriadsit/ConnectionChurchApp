@@ -14,7 +14,7 @@ export default function Visit() {
 
 
   return (
-    <View style={styles.thisView}>
+    <View style={globalStyles.container}>
         <Card>
           <Text style={globalStyles.titleText}>Visit Google Maps</Text>
           <View style={styles.buttonContainer}>

@@ -4,7 +4,6 @@ export const globalStyles = StyleSheet.create({
     
     container: {
         flex: 1,
-        
         padding: 40,
         backgroundColor: 'white',
         height: '100%'
@@ -19,7 +18,8 @@ export const globalStyles = StyleSheet.create({
         lineHeight: 20,
     },
     text: {
-        fontFamily: 'Gothic'
+        fontFamily: 'Gothic',
+        fontSize: 13
     },
     input: {
         borderWidth: 1,
@@ -29,21 +29,11 @@ export const globalStyles = StyleSheet.create({
         borderRadius: 6,
     },
     blockHeading: {
-        flex: 1,
-        width: '100%',
-        height: '100%', // this view should take up 100% of component given to us
-        //flexDirection: 'row', // main axis
-        //alignItems: 'center',  // cross axis ie center vertically
-        paddingBottom: 5,
+       paddingBottom: 5,
         borderBottomColor: '#CBC7CF',
         borderBottomWidth: 1
       },
       block: {
-        flex: 1,
-        width: '100%',
-        height: '100%', // this view should take up 100% of component given to us
-        //flexDirection: 'column', // main axis
-        //alignItems: 'center', 
         paddingTop: 10,
         paddingLeft: 20,
         paddingBottom: 10
@@ -116,6 +106,6 @@ export const images = {
         '3': require('../assets/smallGroups.jpg'),
         '4': require('../assets/volunteering.jpg'),
         '5': require('../assets/membership.jpg'),
-        '6': require('../assets/journey.jpg'),
+        '6': require('../assets/journey1.jpg'),
     }
 }

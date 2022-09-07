@@ -8,7 +8,7 @@ import {
 
 export default function VideoTabBar({ state, descriptors, navigation }) {
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={[{ flexDirection: 'row' }, styles.bar]}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -64,6 +64,9 @@ export default function VideoTabBar({ state, descriptors, navigation }) {
 }
 
 const styles = StyleSheet.create({
+    bar: {
+     margin: 20 
+    },
     tab: {
         height: 60,
         width: 100,
