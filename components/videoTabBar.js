@@ -49,10 +49,10 @@ export default function VideoTabBar({ state, descriptors, navigation }) {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={{ flex: 1 }}
+            style={styles.tabContainer}
           >
             <View style={styles.tab}>
-              <Text style={[{ color: isFocused ? '#673ab7' : '#222' }, styles.tabText]}>
+              <Text style={[{ color: isFocused ? '#cde1f7' : 'white' }, styles.tabText]}>
                 {label}
               </Text>
             </View>
@@ -72,22 +72,27 @@ const styles = StyleSheet.create({
         width: 100,
         borderWidth: 1,
         borderColor: '#f2f2f2',
-        marginBottom: 8,
         paddingBottom: 0,
-        paddingLeft: 20,
-        paddingTop: 5,
-        alignSelf: 'center',
-        backgroundColor: '#ebeff1',
-        borderRadius: 10,
-        shadowOffset: { width: 1, height: 1 },  // how much down and right shadow is
-        shadowColor: '#333',
-        shadowOpacity: 0.3,
-        shadowRadius: 2,
-        elevation: 3,
+        backgroundColor: '#5C5565',
+        borderRadius: 15,
+        justifyContent: 'center',
+        alignItems: 'center'
+        //shadowOffset: { width: 1, height: 1 },  // how much down and right shadow is
+        //shadowColor: '#333',
+        //shadowOpacity: 0.3,
+        //shadowRadius: 2,
+        //elevation: 3,
+    },
+    tabContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
     },
     tabText: {
       fontFamily: 'Gothic',
-      paddingTop: 10
+      //justifyContent: 'center',
+     
+      //paddingTop: 10
     }
 })
 

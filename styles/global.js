@@ -6,7 +6,8 @@ export const globalStyles = StyleSheet.create({
         flex: 1,
         padding: 40,
         backgroundColor: 'white',
-        height: '100%'
+        height: '100%',
+        
     },
     titleText: {
         fontFamily: 'Gothic-Bold',

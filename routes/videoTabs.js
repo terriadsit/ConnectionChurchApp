@@ -25,13 +25,13 @@ export default function VideoTabs() {
       Navigator initialRouteName="On YouTube"
     >
       <Tab.Screen 
-        name="Recent Sermons" 
+        name="Recent" 
         component={RecentVideos}
         options={{ headerShown: true }} 
       />
 
       <Tab.Screen 
-        name="Watch Live" 
+        name="Live" 
         component={WatchNow}
         options={{ headerShown: true }} 
       />

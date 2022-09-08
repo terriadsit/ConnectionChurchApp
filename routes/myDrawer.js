@@ -55,7 +55,7 @@ function CustomDrawerContent(props) {
         <Drawer.Screen 
           name="Home" 
           component={HomeStack} 
-          options={{ headerTitle: (props) => <Header title='Connection Church  ' /> }} 
+          options={{ headerTitle: (props) => <Header title='CONNECTION CHURCH  ' /> }} 
          />
          <Drawer.Screen 
           name="Bible" 
@@ -70,7 +70,7 @@ function CustomDrawerContent(props) {
         <Drawer.Screen 
           name="Watch Sermons" 
           component={VideoTabs} 
-          options={{ headerTitle: (props) => <Header title='Watch:' /> }} 
+          options={{ headerTitle: (props) => <Header title='Watch Sermons:' /> }} 
          />
          <Drawer.Screen 
           name="Next Steps" 

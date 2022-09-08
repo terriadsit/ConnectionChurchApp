@@ -5,9 +5,11 @@ import * as WebBrowser from 'expo-web-browser';
 import FlatButton from "../shared/button";
 import Card from "../shared/card";
 import { globalStyles } from "../styles/global";
+import ImageWithButton from "../components/imageWithButton";
 
 export default function TheBible() {
-  const theBible = require('../assets/pallets.png');
+  const theBible = require('../assets/theBible.jpg');
+  const title = "The Bible at BlueLetterBible.org"
 
   const handlePress = () => {
     WebBrowser.openBrowserAsync('https://www.blueletterbible.org/niv/jhn/1/1/s_998001');
@@ -15,22 +17,25 @@ export default function TheBible() {
 
 
   return (
+    <View style={globalStyles.container}>
+      <ImageWithButton handlePress={handlePress} image={theBible} title={title}  />
+    </View>
     
-    <ImageBackground source={theBible} style={styles.image}>
+    // <ImageBackground source={theBible} style={styles.image}>
       
        
-        <View style={[globalStyles.imageTextContainer, styles.opaqueBackground]}>
+    //     <View style={[globalStyles.imageTextContainer, styles.opaqueBackground]}>
           
-          <Text style={[globalStyles.imageText]}>Read the Bible online at the BlueLetterBible.org</Text>
-          <View style={styles.buttonContainer}>
-            <FlatButton 
-              text='Read Now' 
-              onPress={handlePress}>
-            </FlatButton>
-          </View>
-        </View>
+    //       <Text style={[globalStyles.imageText]}>Read the Bible online at the BlueLetterBible.org</Text>
+    //       <View style={styles.buttonContainer}>
+    //         <FlatButton 
+    //           text='Read Now' 
+    //           onPress={handlePress}>
+    //         </FlatButton>
+    //       </View>
+    //     </View>
         
-        </ImageBackground>
+    //     </ImageBackground>
     
   );
 }

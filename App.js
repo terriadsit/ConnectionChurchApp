@@ -17,8 +17,8 @@ export default function App() {
   const logo = require('./assets/connectionBlue.jpg');
   
   const [fontsLoaded] = useFonts({
-    'Gothic-Bold': require('./assets/fonts/NanumGothicCoding-Bold.ttf'),
-    'Gothic': require('./assets/fonts/NanumGothicCoding-Regular.ttf'),
+    'Gothic-Bold': require('./assets/fonts/Oswald-Bold.ttf'),
+    'Gothic': require('./assets/fonts/Oswald-Regular.ttf'),
   });
 
   if (!fontsLoaded) {
