@@ -11,8 +11,7 @@
       "image": "./assets/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#888"
-     },
-    
+    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -20,16 +19,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "connectionChurch.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "connectionChurch.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "055e234b-842f-4716-9c3a-8295234fb750"
+      }
     }
   }
 }
