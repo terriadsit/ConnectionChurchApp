@@ -1,6 +1,6 @@
 ﻿# ConnectionChurchApp
-A mobile app created with React-Native Expo to allow users to reach all of the content on the corresponding church web site: email staff, watch sermon videos, read the Bible and find information regarding policies and programs.![screenshots](assets/screenshots.png) 
-Status: waiting for client to choose font, photos.
+A mobile app created with React-Native Expo to allow users to reach all of the content on the corresponding church web site: email staff, watch sermon videos, read the Bible and find information regarding policies and programs. Status: waiting for client to choose font, photos before adding to app stores.![screenshots](assets/screenshots.png) 
+
 
 ## Why I build the project this way
 * Expo can manage the different android and ios devices.
