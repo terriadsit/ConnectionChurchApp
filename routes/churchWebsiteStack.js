@@ -19,8 +19,8 @@ export default function ChurchWebsiteStack() {
         }
       }}
     >
-      <Stack.Screen 
-        name="Church Website" 
+    <Stack.Screen 
+        name="MyConnection.Church" 
         component={ChurchWebsite} 
         options={{ headerShown: true }}
      />

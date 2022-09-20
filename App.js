@@ -14,7 +14,7 @@ import AboutStack from './routes/aboutStack';
 //SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const logo = require('./assets/connectionBlue.jpg');
+  const logo = require('./assets/splash.png');
   
   const [fontsLoaded] = useFonts({
     'Gothic-Bold': require('./assets/fonts/Oswald-Bold.ttf'),

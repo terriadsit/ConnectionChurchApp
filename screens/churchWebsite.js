@@ -1,29 +1,20 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import * as WebBrowser from 'expo-web-browser';
-
-import FlatButton from "../shared/button";
-import Card from "../shared/card";
 import { globalStyles } from "../styles/global";
 
+import ImageWithButton from '../components/imageWithButton';
+
 export default function ChurchWebsite() {
+  const pallets = require('../assets/pallets.png');
 
   const handlePress = () => {
     WebBrowser.openBrowserAsync('https://www.myconnection.church/');
   }
 
-
   return (
     <View style={globalStyles.container}>
-        <Card>
-          <Text style={globalStyles.text}>Visit our full website, MyConnection.Church</Text>
-          <View style={styles.buttonContainer}>
-            <FlatButton 
-              text='Go Now' 
-              onPress={handlePress}>
-            </FlatButton>
-          </View>
-        </Card>
+       <ImageWithButton handlePress={handlePress} title='Go to Full Website' image={pallets} />
     </View>
   );
 }
