@@ -49,7 +49,7 @@ export default function NextStepsForm({ item }) {
          
         // Opens prefilled email
         MailComposer.composeAsync({
-          recipients: ['terriadsit@yahoo.com'], // array of email addresses
+          recipients: ['office@MyConnection.Church'], // array of email addresses
           subject: subject,
           body: body
         })

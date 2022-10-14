@@ -9,7 +9,7 @@ import ImageWithButton from "../components/imageWithButton";
 
 export default function TheBible() {
   const theBible = require('../assets/theBible.jpg');
-  const title = "The Bible at BlueLetterBible.org"
+  const title = "BlueLetterBible"
 
   const handlePress = () => {
     WebBrowser.openBrowserAsync('https://www.blueletterbible.org/niv/jhn/1/1/s_998001');

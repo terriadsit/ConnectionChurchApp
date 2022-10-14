@@ -61,7 +61,7 @@ export const globalStyles = StyleSheet.create({
         alignItems: 'center',
     },
     imageTextTitle: {
-        fontSize: 15,
+        fontSize: 16,
         fontFamily: 'Gothic-Bold',
         color: 'black',
         margin: 5,
@@ -76,7 +76,7 @@ export const globalStyles = StyleSheet.create({
     imageText: {
         fontFamily: 'Gothic',
         color: 'black',
-        fontSize: 13,
+        fontSize: 15,
         opacity: 1.0
     },
     
