@@ -6,6 +6,7 @@ A mobile app created with React-Native Expo to allow users to reach all of the c
 ## Why I build the project this way
 * Expo can manage the different android and ios devices.
 * Expo had a component for everything that I needed to add.
+* Needs to be maintenance free. 
 * The client requested everything as much like their website as possible.
 * The client uses Brezechms forms which integrated easily as a Webview.
 * I used Formik with Yup for the one form they had which WIX had handled on their website.
